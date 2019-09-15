@@ -1,5 +1,5 @@
 on skript load:
-	download from "https://github.com/megalegotom/skript/raw/master/Skrypt" to "plugins/Skript/scripts/%script%.sk"
+	download from "https://raw.githubusercontent.com/megalegotom/skript/master/downloader-test" to "plugins/Skript/scripts/%script%.sk"
 	
 command /dltest:
 	trigger:
