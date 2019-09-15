@@ -1,5 +1,12 @@
+variables:
+	version: 1
+
 on skript load:
-	download from "https://raw.githubusercontent.com/megalegotom/skript/master/downloader-test" to "plugins/Skript/scripts/%script%.sk"
+	set {_version} to line 2 from url "https://raw.githubusercontent.com/megalegotom/skript/master/downloader-test"
+	if {_version} isn't {@version}:
+		download from "https://raw.githubusercontent.com/megalegotom/skript/master/downloader-test" to "plugins/Skript/scripts/%script%.sk"
+		wait 10 tick
+		execute console command "sk reload %script%"
 	
 command /dltest:
 	trigger:
